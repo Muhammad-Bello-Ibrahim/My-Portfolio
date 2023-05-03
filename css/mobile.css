@@ -1,0 +1,6 @@
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media screen and (min-width:480px)  { 
+    .navbar{
+        /* background: red; */
+    }
+ }
