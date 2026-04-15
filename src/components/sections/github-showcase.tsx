@@ -8,16 +8,22 @@ type GitHubRepo = {
 };
 
 async function getGithubRepos() {
-  // Pull latest repositories with ISR caching for performance.
-  const response = await fetch("https://api.github.com/users/qouda/repos?sort=updated&per_page=4", {
-    next: { revalidate: 3600 },
-  });
+  // Pull repositories at build time for static export compatibility.
+  try {
+    const response = await fetch("https://api.github.com/users/qouda/repos?sort=updated&per_page=4", {
+      cache: "force-cache",
+    });
 
-  if (!response.ok) {
+    if (!response.ok) {
+      console.error("Failed to fetch GitHub repositories:", response.status, response.statusText);
+      return [] as GitHubRepo[];
+    }
+
+    return (await response.json()) as GitHubRepo[];
+  } catch (error) {
+    console.error("Error fetching GitHub repositories:", error);
     return [] as GitHubRepo[];
   }
-
-  return (await response.json()) as GitHubRepo[];
 }
 
 export async function GithubShowcaseSection() {
