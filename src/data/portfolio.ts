@@ -1,3 +1,4 @@
+// Central content model for the portfolio so sections stay reusable and data-driven.
 export type SkillGroup = {
   title: string;
   items: string[];

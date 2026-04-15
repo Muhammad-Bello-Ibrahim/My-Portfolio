@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mufteem Dev Portfolio
 
-## Getting Started
+A modern Next.js portfolio for **Muhammad Bello Ibrahim (Mufteem Dev)** focused on AIoT, fintech, EdTech, HealthTech, and product engineering leadership.
 
-First, run the development server:
+## Tech Stack
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- next-themes
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+- Premium hero with brand statement: **Think Bold, Build Smart.**
+- About, skills, projects, experience timeline, education, vision/mission, contact
+- Project filtering by domain
+- GitHub repository integration
+- Dark/light mode toggle
+- Micro-interactions and scroll-reveal animations
+- SEO metadata + JSON-LD schema
+- Downloadable CV button (`/public/cv/muhammad-bello-ibrahim-cv.pdf`)
+
+## Project Structure
+```text
+src/
+  app/
+    globals.css
+    layout.tsx
+    page.tsx
+  components/
+    layout/
+      footer.tsx
+      navbar.tsx
+      theme-toggle.tsx
+    providers/
+      theme-provider.tsx
+    sections/
+      about.tsx
+      contact.tsx
+      education.tsx
+      github-showcase.tsx
+      hero.tsx
+      insights.tsx
+      journey.tsx
+      projects.tsx
+      skills.tsx
+      vision.tsx
+    ui/
+      animated-section.tsx
+      section-heading.tsx
+  data/
+    portfolio.ts
+public/
+  cv/
+    muhammad-bello-ibrahim-cv.pdf
+  projects/
+    connectrix.svg
+    eguy.svg
+    mesafe.svg
+    routina.svg
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Validate
+```bash
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content Updates
+- Update all profile/project text in: `src/data/portfolio.ts`
+- Replace CV file at: `public/cv/muhammad-bello-ibrahim-cv.pdf`
+- Replace project thumbnails in: `public/projects/`

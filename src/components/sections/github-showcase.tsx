@@ -8,6 +8,7 @@ type GitHubRepo = {
 };
 
 async function getGithubRepos() {
+  // Pull latest repositories with ISR caching for performance.
   const response = await fetch("https://api.github.com/users/qouda/repos?sort=updated&per_page=4", {
     next: { revalidate: 3600 },
   });

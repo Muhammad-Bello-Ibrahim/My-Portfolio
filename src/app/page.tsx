@@ -12,6 +12,7 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 
 export default function Home() {
+  // Structured data improves discoverability for search engines.
   const schema = {
     "@context": "https://schema.org",
     "@type": "Person",
