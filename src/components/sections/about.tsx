@@ -4,18 +4,19 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function AboutSection() {
   return (
-    <AnimatedSection id="about" className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-      <SectionHeading badge="About" title="Story and Mission" />
-      <div className="grid gap-6 rounded-3xl border border-slate-500/20 bg-white/70 p-6 shadow-xl shadow-slate-900/5 backdrop-blur sm:p-8 lg:grid-cols-2 dark:bg-slate-900/50">
-        <article>
+    <AnimatedSection id="about" className="bg-[#fbfaf6] py-24 dark:bg-[#130a18]">
+      <div className="section-shell">
+      <SectionHeading badge="About" title="Technology should feel useful, human, and clear." />
+      <div className="grid overflow-hidden rounded-[2rem] border border-black/10 lg:grid-cols-2 dark:border-white/10">
+        <article className="bg-white p-8 sm:p-12 dark:bg-white/5">
           <h3 className="text-lg font-semibold text-slate-900 dark:text-white">My Story</h3>
           <p className="mt-3 text-slate-600 dark:text-slate-300">{profile.bio}</p>
         </article>
-        <article>
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Mission</h3>
-          <p className="mt-3 text-slate-600 dark:text-slate-300">{profile.mission}</p>
+        <article className="bg-[#d8ff63] p-8 text-[#130a18] sm:p-12">
+          <h3 className="text-lg font-semibold text-[#130a18]">Mission</h3>
+          <p className="mt-3 text-black/70">{profile.mission}</p>
         </article>
-      </div>
+      </div></div>
     </AnimatedSection>
   );
 }

@@ -7,16 +7,17 @@ const socialIcons = { LinkedIn: BriefcaseBusiness, X: MessageCircle };
 
 export function ContactSection() {
   return (
-    <AnimatedSection id="contact" className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-      <SectionHeading badge="Contact" title="Let's Build Something Meaningful" />
+    <AnimatedSection id="contact" className="bg-[#130a18] py-24 text-white">
+      <div className="section-shell [&_h2]:!text-white">
+      <SectionHeading badge="Contact" title="Have a useful idea? Let’s make it real." />
 
-      <div className="glass-card rounded-3xl p-6 sm:p-8">
-        <p className="text-slate-600 dark:text-slate-300">
+      <div className="rounded-[2rem] border border-white/15 bg-white/[0.06] p-8 sm:p-12">
+        <p className="max-w-2xl text-lg text-white/65">
           Open to frontend opportunities, product collaborations, technology training, and practical software projects with meaningful impact.
         </p>
 
         <div className="mt-5 flex flex-wrap gap-3">
-          <a href="https://github.com/Muhammad-Bello-Ibrahim" target="_blank" rel="noreferrer" className="interactive rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white dark:bg-white dark:text-slate-900">
+          <a href="https://github.com/Muhammad-Bello-Ibrahim" target="_blank" rel="noreferrer" className="interactive rounded-xl bg-[#d8ff63] px-5 py-3 text-sm font-bold text-[#130a18]">
             <GitFork aria-hidden="true" className="mr-2 inline h-4 w-4" />
             View GitHub
           </a>
@@ -28,14 +29,14 @@ export function ContactSection() {
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
-                className="interactive rounded-full border border-slate-400/30 px-5 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200"
+                className="interactive rounded-xl border border-white/20 px-5 py-3 text-sm font-bold text-white"
               >
                 {SocialIcon && <SocialIcon aria-hidden="true" className="mr-2 inline h-4 w-4" />}
                 {social.label}
               </a>
             );})}
         </div>
-      </div>
+      </div></div>
     </AnimatedSection>
   );
 }

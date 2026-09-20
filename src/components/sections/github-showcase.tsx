@@ -29,12 +29,13 @@ export async function GithubShowcaseSection() {
   const repos = await getGithubRepos();
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8" id="github">
-      <div className="mb-8 text-center">
-        <span className="inline-flex rounded-full border border-slate-500/25 bg-slate-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-500 dark:text-sky-300">
+    <section className="bg-white py-24 dark:bg-[#1c1122]" id="github">
+      <div className="section-shell">
+      <div className="mb-10 max-w-3xl">
+        <span className="eyebrow inline-flex rounded-full border border-black/10 px-3 py-1.5 text-[#ff5c35] dark:border-white/10">
           GitHub
         </span>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Latest Public Repositories</h2>
+        <h2 className="mt-5 text-4xl font-black leading-[0.95] tracking-[-0.04em] sm:text-6xl">Latest public repositories.</h2>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -45,10 +46,10 @@ export async function GithubShowcaseSection() {
               href={repo.html_url}
               target="_blank"
               rel="noreferrer"
-              className="glass-card interactive rounded-2xl p-5"
+              className="interactive rounded-[1.75rem] border border-black/10 bg-[#fbfaf6] p-7 dark:border-white/10 dark:bg-white/5"
             >
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{repo.name}</h3>
-              <p className="mt-2 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">{repo.description ?? "No description provided."}</p>
+              <h3 className="text-xl font-bold">{repo.name}</h3>
+              <p className="mt-3 line-clamp-2 text-sm text-black/60 dark:text-white/60">{repo.description ?? "No description provided."}</p>
               <div className="mt-3 flex gap-4 text-xs text-slate-500 dark:text-slate-400">
                 <span>★ {repo.stargazers_count}</span>
                 <span>{repo.language ?? "Mixed"}</span>
@@ -60,7 +61,7 @@ export async function GithubShowcaseSection() {
             GitHub data could not be loaded right now.
           </p>
         )}
-      </div>
+      </div></div>
     </section>
   );
 }

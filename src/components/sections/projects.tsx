@@ -16,7 +16,8 @@ export function ProjectsSection() {
   );
 
   return (
-    <AnimatedSection id="projects" className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <AnimatedSection id="projects" className="bg-[#130a18] py-24 text-white">
+      <div className="section-shell [&_h2]:!text-white">
       <SectionHeading
         badge="Projects"
         title="Product Work Across Industries"
@@ -31,8 +32,8 @@ export function ProjectsSection() {
             onClick={() => setActiveCategory(category)}
             className={`interactive rounded-full border px-4 py-2 text-sm font-medium transition ${
               activeCategory === category
-                ? "border-sky-500 bg-sky-500 text-white"
-                : "border-slate-400/30 bg-white/70 text-slate-700 dark:bg-slate-900/70 dark:text-slate-200"
+                ? "border-[#d8ff63] bg-[#d8ff63] text-[#130a18]"
+                : "border-white/20 bg-white/5 text-white/70"
             }`}
           >
             {category}
@@ -45,20 +46,20 @@ export function ProjectsSection() {
           <motion.article
             key={project.name}
             whileHover={{ y: -6 }}
-            className="glass-card overflow-hidden rounded-3xl border border-slate-500/20"
+            className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/[0.06]"
           >
             <div className="relative h-44 w-full">
               <Image src={project.image} alt={`${project.name} preview`} fill className="object-cover" />
             </div>
             <div className="p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500 dark:text-sky-300">{project.category}</p>
-              <h3 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">{project.name}</h3>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{project.summary}</p>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-600 dark:text-emerald-300">{project.status}</p>
+              <p className="eyebrow text-[#d8ff63]">{project.category}</p>
+              <h3 className="mt-2 text-2xl font-bold text-white">{project.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/60">{project.summary}</p>
+              <p className="mt-4 text-xs font-bold uppercase tracking-[0.12em] text-[#ff8d72]">{project.status}</p>
 
               <ul className="mt-3 flex flex-wrap gap-2">
                 {project.stack.map((item) => (
-                  <li key={item} className="rounded-full bg-slate-200/70 px-2.5 py-1 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+                  <li key={item} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/70">
                     {item}
                   </li>
                 ))}
@@ -71,7 +72,7 @@ export function ProjectsSection() {
             </div>
           </motion.article>
         ))}
-      </div>
+      </div></div>
     </AnimatedSection>
   );
 }

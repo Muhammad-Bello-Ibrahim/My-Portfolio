@@ -4,19 +4,19 @@ import { journey } from "@/data/portfolio";
 
 export function JourneySection() {
   return (
-    <AnimatedSection id="journey" className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <AnimatedSection id="journey" className="bg-[#fbfaf6] py-24 dark:bg-[#130a18]">
+      <div className="section-shell">
       <SectionHeading badge="Experience" title="Professional Journey" />
 
-      <div className="relative mx-auto max-w-3xl border-l border-slate-500/25 pl-6">
+      <div className="grid gap-4 lg:grid-cols-2">
         {journey.map((item, index) => (
-          <article key={item.title} className={`relative pb-8 ${index === journey.length - 1 ? "pb-0" : ""}`}>
-            <span className="absolute -left-[31px] mt-1.5 h-3.5 w-3.5 rounded-full border border-sky-300 bg-sky-500" />
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-500 dark:text-sky-300">{item.period}</p>
-            <h3 className="mt-1 text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h3>
-            <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{item.description}</p>
+          <article key={item.title} className={`rounded-[1.75rem] border border-black/10 bg-white p-7 dark:border-white/10 dark:bg-white/5 ${index === journey.length - 1 ? "lg:bg-[#d8ff63] lg:text-[#130a18]" : ""}`}>
+            <p className="eyebrow text-[#ff5c35]">{item.period}</p>
+            <h3 className="mt-3 text-2xl font-bold">{item.title}</h3>
+            <p className={`mt-3 text-sm leading-relaxed ${index === journey.length - 1 ? "text-current/70" : "text-black/60 dark:text-white/60"}`}>{item.description}</p>
           </article>
         ))}
-      </div>
+      </div></div>
     </AnimatedSection>
   );
 }

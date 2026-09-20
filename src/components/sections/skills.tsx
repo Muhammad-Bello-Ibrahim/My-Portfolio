@@ -12,31 +12,32 @@ const groupIcons: Record<string, LucideIcon> = {
 
 export function SkillsSection() {
   return (
-    <AnimatedSection id="skills" className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <AnimatedSection id="skills" className="bg-white py-24 dark:bg-[#1c1122]">
+      <div className="section-shell">
       <SectionHeading badge="Skills" title="Technology Toolbox" description="Categorized to match product delivery across frontend, backend, and intelligent systems." />
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2">
         {skillGroups.map((group) => {
           const GroupIcon = groupIcons[group.title] ?? Code2;
-          return <article key={group.title} className="glass-card rounded-2xl p-5">
+          return <article key={group.title} className="interactive rounded-[1.75rem] border border-black/10 bg-[#fbfaf6] p-6 dark:border-white/10 dark:bg-white/5">
             <h3 className="flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-white">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-sky-500/10 text-sky-600 dark:text-sky-300"><GroupIcon aria-hidden="true" className="h-5 w-5" /></span>
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-[#130a18] text-[#d8ff63] dark:bg-[#d8ff63] dark:text-[#130a18]"><GroupIcon aria-hidden="true" className="h-5 w-5" /></span>
               {group.title}
             </h3>
             <ul className="mt-3 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-slate-500/20 bg-white/70 px-3 py-1.5 text-xs font-medium text-slate-700 dark:bg-slate-900/70 dark:text-slate-200"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-white px-3 py-1.5 text-xs font-bold text-black/70 dark:border-white/10 dark:bg-white/5 dark:text-white/75"
                 >
-                  <Check aria-hidden="true" className="h-3.5 w-3.5 text-emerald-500" />
+                  <Check aria-hidden="true" className="h-3.5 w-3.5 text-[#ff5c35]" />
                   {item}
                 </li>
               ))}
             </ul>
           </article>;
         })}
-      </div>
+      </div></div>
     </AnimatedSection>
   );
 }

@@ -1,7 +1,7 @@
 export function Footer() {
   return (
-    <footer className="border-t border-slate-500/20 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 text-sm text-slate-500 sm:flex-row dark:text-slate-400">
+    <footer className="border-t border-white/10 bg-[#130a18] px-5 py-8 text-white">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-2 text-sm text-white/50 sm:flex-row">
         <p>© {new Date().getFullYear()} Muhammad Bello Ibrahim.</p>
         <p>Think Bold, Build Smart.</p>
       </div>

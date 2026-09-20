@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -14,11 +15,11 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      className="interactive h-10 w-10 rounded-full border border-slate-500/25 bg-white/80 text-sm backdrop-blur dark:bg-slate-900/80"
+      className="interactive grid h-10 w-10 place-items-center rounded-xl border border-white/20 bg-white/10 text-white backdrop-blur"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label="Toggle color mode"
     >
-      {isDark ? "☀️" : "🌙"}
+      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
     </button>
   );
 }
