@@ -3,8 +3,8 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function VisionSection() {
   return (
-    <AnimatedSection id="vision" className="bg-[#d8ff63] py-24 text-[#130a18]">
-      <div className="section-shell [&_h2]:!text-[#130a18]">
+    <AnimatedSection id="vision" className="bg-[#EAE8DC] py-24 text-[#0E3746]">
+      <div className="section-shell [&_h2]:!text-[#0E3746]">
       <SectionHeading badge="Orao Technologies" title="Vision & Mission" />
 
       <div className="grid gap-5 md:grid-cols-2">
@@ -15,7 +15,7 @@ export function VisionSection() {
           </p>
         </article>
 
-        <article className="rounded-[2rem] bg-[#130a18] p-8 text-white">
+        <article className="rounded-[2rem] bg-[#0E3746] p-8 text-white">
           <h3 className="text-2xl font-bold">Mission</h3>
           <p className="mt-3 text-white/65">
             Orao Technologies designs practical software, delivers technology training, and develops products that help people and organisations work more effectively.

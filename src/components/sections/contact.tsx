@@ -7,7 +7,7 @@ const socialIcons = { LinkedIn: BriefcaseBusiness, X: MessageCircle };
 
 export function ContactSection() {
   return (
-    <AnimatedSection id="contact" className="bg-[#130a18] py-24 text-white">
+    <AnimatedSection id="contact" className="bg-[#0E3746] py-24 text-white">
       <div className="section-shell [&_h2]:!text-white">
       <SectionHeading badge="Contact" title="Have a useful idea? Let’s make it real." />
 
@@ -17,7 +17,7 @@ export function ContactSection() {
         </p>
 
         <div className="mt-5 flex flex-wrap gap-3">
-          <a href="https://github.com/Muhammad-Bello-Ibrahim" target="_blank" rel="noreferrer" className="interactive rounded-xl bg-[#d8ff63] px-5 py-3 text-sm font-bold text-[#130a18]">
+          <a href="https://github.com/Muhammad-Bello-Ibrahim" target="_blank" rel="noreferrer" className="interactive rounded-xl bg-[#BE2623] px-5 py-3 text-sm font-bold text-white">
             <GitFork aria-hidden="true" className="mr-2 inline h-4 w-4" />
             View GitHub
           </a>

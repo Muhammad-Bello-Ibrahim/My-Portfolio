@@ -25,7 +25,7 @@ export const profile = {
   tagline: "Think Bold, Build Smart.",
   role: "CEO, Orao Technologies",
   location: "Gombe, Nigeria",
-  bio: "I am a frontend developer and Computer Science graduate building practical digital products for education, healthcare, finance, and small businesses. I lead product work at Orao Technologies and enjoy turning real problems into clear, usable software.",
+  bio: "I am a full-stack developer and Computer Science graduate building practical digital products for education, healthcare, finance, and small businesses. I work across interface design, application logic, databases, integrations, and deployment while leading product work at Orao Technologies.",
   mission:
     "My goal is to build accessible software that solves real problems in Nigerian communities, grows sustainably, and gives people simpler ways to work, learn, receive care, and participate.",
   socialLinks: [
@@ -37,20 +37,20 @@ export const profile = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Frontend",
-    items: ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Next.js", "Tailwind CSS", "Bootstrap"],
+    title: "Frontend Engineering",
+    items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Bootstrap"],
   },
   {
-    title: "Backend",
-    items: ["Node.js", "Express", "MongoDB", "MySQL", "REST APIs", "Firebase"],
+    title: "Backend & Data",
+    items: ["Node.js", "Express", "MongoDB", "Mongoose", "MySQL", "Supabase", "Firebase", "REST APIs"],
   },
   {
-    title: "Product & Design",
-    items: ["Figma", "UI/UX", "Product Planning", "Responsive Design", "Technical Documentation"],
+    title: "Platforms & Integrations",
+    items: ["Paystack", "Cloudinary", "Socket.IO", "JWT Auth", "PWA", "TanStack Query", "Radix UI", "shadcn/ui"],
   },
   {
-    title: "Tools",
-    items: ["Git & GitHub", "Vercel", "Netlify", "Postman", "WordPress", "Canva"],
+    title: "Languages & Tools",
+    items: ["Python", "PHP", "Git & GitHub", "Vite", "Vercel", "Netlify", "Postman", "Figma", "WordPress"],
   },
 ];
 
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     summary:
       "A web product exploring wallets, payments, transaction records, earnings, and a structured referral programme called ElevateX.",
     category: "Fintech",
-    stack: ["React", "Express", "MongoDB", "Payment APIs"],
+    stack: ["Next.js", "MongoDB", "Mongoose", "Paystack"],
     image: "/projects/eguy.svg",
     status: "In development",
     links: {},
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     category: "HealthTech",
     stack: ["Next.js", "Node.js", "Biometric APIs", "Cloud Storage"],
     image: "/projects/mesafe.svg",
-    status: "MVP planning & validation",
+    status: "Product development & validation",
     links: {},
   },
   {
@@ -101,9 +101,9 @@ export const projects: Project[] = [
 
 export const journey = [
   {
-    title: "Frontend Development",
+    title: "Full-Stack Development",
     period: "2020 — Present",
-    description: "Building responsive web interfaces and product experiences with JavaScript, React, Next.js, Tailwind CSS, and related tools.",
+    description: "Building complete web products across responsive interfaces, application logic, databases, authentication, APIs, integrations, and deployment.",
   },
   {
     title: "Community & Campus Leadership",

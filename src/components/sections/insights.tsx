@@ -4,7 +4,7 @@ import { insights } from "@/data/portfolio";
 
 export function InsightsSection() {
   return (
-    <AnimatedSection id="insights" className="bg-[#fbfaf6] py-24 dark:bg-[#130a18]">
+    <AnimatedSection id="insights" className="bg-[#F4F2EC] py-24 dark:bg-[#0E3746]">
       <div className="section-shell">
       <SectionHeading badge="Current Focus" title="What I’m Learning & Exploring" description="Areas guiding my present learning, research interests, and product decisions." />
       <div className="grid gap-5 md:grid-cols-3">

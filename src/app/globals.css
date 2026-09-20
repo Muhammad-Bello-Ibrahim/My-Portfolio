@@ -2,10 +2,10 @@
 
 :root {
   color-scheme: light;
-  --ink: #130a18;
-  --paper: #fbfaf6;
-  --electric: #ff5c35;
-  --lime: #d8ff63;
+  --ink: #0e3746;
+  --stone: #eae8dc;
+  --paper: #f4f2ec;
+  --accent: #be2623;
 }
 
 html {
@@ -33,3 +33,15 @@ h1, h2, h3, .display-font { font-family: "Space Grotesk", ui-sans-serif, system-
 
 .section-shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
 .eyebrow { @apply text-xs font-extrabold uppercase tracking-[0.24em]; }
+
+@keyframes project-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 0.625rem)); }
+}
+
+.project-track { animation: project-marquee 34s linear infinite; width: max-content; }
+.project-track:hover { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .project-track { animation: none; }
+}

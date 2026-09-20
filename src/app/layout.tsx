@@ -5,15 +5,15 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mufteem.dev"),
   title: {
-    default: "Muhammad Bello Ibrahim | Frontend Developer & Tech Founder",
+    default: "Muhammad Bello Ibrahim | Full-Stack Developer & Tech Founder",
     template: "%s | Mufteem Dev",
   },
   description:
-    "Portfolio of Muhammad Bello Ibrahim (Mufteem Dev), a frontend developer, Computer Science graduate, and CEO of Orao Technologies in Gombe, Nigeria.",
+    "Portfolio of Muhammad Bello Ibrahim (Mufteem Dev), a full-stack developer, Computer Science graduate, and CEO of Orao Technologies in Gombe, Nigeria.",
   keywords: [
     "Muhammad Bello Ibrahim",
     "Mufteem Dev",
-    "Frontend Developer",
+    "Full-Stack Developer",
     "Next.js",
     "React",
     "Fintech",
@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-[#fbfaf6] font-sans text-[#130a18] antialiased dark:bg-[#130a18] dark:text-[#fbfaf6]">
+      <body className="bg-[#F4F2EC] font-sans text-[#0E3746] antialiased dark:bg-[#0E3746] dark:text-[#F4F2EC]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

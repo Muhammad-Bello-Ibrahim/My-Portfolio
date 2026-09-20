@@ -21,7 +21,7 @@ export default function Home() {
     jobTitle: "CEO, Orao Technologies",
     alumniOf: "Gombe State University",
     homeLocation: "Gombe, Nigeria",
-    knowsAbout: ["Frontend Development", "React", "Next.js", "Product Design", "Fintech", "Campus Technology", "Digital Health"],
+    knowsAbout: ["Full-Stack Development", "React", "Next.js", "Node.js", "MongoDB", "Paystack", "Python", "Fintech", "Campus Technology", "Digital Health"],
   };
 
   return (

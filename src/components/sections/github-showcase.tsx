@@ -29,10 +29,10 @@ export async function GithubShowcaseSection() {
   const repos = await getGithubRepos();
 
   return (
-    <section className="bg-white py-24 dark:bg-[#1c1122]" id="github">
+    <section className="bg-white py-24 dark:bg-[#0E3746]" id="github">
       <div className="section-shell">
       <div className="mb-10 max-w-3xl">
-        <span className="eyebrow inline-flex rounded-full border border-black/10 px-3 py-1.5 text-[#ff5c35] dark:border-white/10">
+        <span className="eyebrow inline-flex rounded-full border border-black/10 px-3 py-1.5 text-[#BE2623] dark:border-white/10">
           GitHub
         </span>
         <h2 className="mt-5 text-4xl font-black leading-[0.95] tracking-[-0.04em] sm:text-6xl">Latest public repositories.</h2>
@@ -46,7 +46,7 @@ export async function GithubShowcaseSection() {
               href={repo.html_url}
               target="_blank"
               rel="noreferrer"
-              className="interactive rounded-[1.75rem] border border-black/10 bg-[#fbfaf6] p-7 dark:border-white/10 dark:bg-white/5"
+              className="interactive rounded-[1.75rem] border border-black/10 bg-[#F4F2EC] p-7 dark:border-white/10 dark:bg-white/5"
             >
               <h3 className="text-xl font-bold">{repo.name}</h3>
               <p className="mt-3 line-clamp-2 text-sm text-black/60 dark:text-white/60">{repo.description ?? "No description provided."}</p>
