@@ -23,7 +23,7 @@ export const profile = {
   name: "Muhammad Bello Ibrahim",
   handle: "Mufteem Dev",
   tagline: "Think Bold, Build Smart.",
-  role: "Frontend Developer & CEO, Orao Technologies",
+  role: "CEO, Orao Technologies",
   location: "Gombe, Nigeria",
   bio: "I am a frontend developer and Computer Science graduate building practical digital products for education, healthcare, finance, and small businesses. I lead product work at Orao Technologies and enjoy turning real problems into clear, usable software.",
   mission:

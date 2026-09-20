@@ -1,6 +1,9 @@
 import { profile } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { BriefcaseBusiness, GitFork, MessageCircle } from "lucide-react";
+
+const socialIcons = { LinkedIn: BriefcaseBusiness, X: MessageCircle };
 
 export function ContactSection() {
   return (
@@ -14,9 +17,12 @@ export function ContactSection() {
 
         <div className="mt-5 flex flex-wrap gap-3">
           <a href="https://github.com/Muhammad-Bello-Ibrahim" target="_blank" rel="noreferrer" className="interactive rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white dark:bg-white dark:text-slate-900">
+            <GitFork aria-hidden="true" className="mr-2 inline h-4 w-4" />
             View GitHub
           </a>
-          {profile.socialLinks.filter((social) => social.label !== "GitHub").map((social) => (
+          {profile.socialLinks.filter((social) => social.label !== "GitHub").map((social) => {
+              const SocialIcon = socialIcons[social.label as keyof typeof socialIcons];
+              return (
               <a
                 key={social.label}
                 href={social.href}
@@ -24,9 +30,10 @@ export function ContactSection() {
                 rel="noreferrer"
                 className="interactive rounded-full border border-slate-400/30 px-5 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200"
               >
+                {SocialIcon && <SocialIcon aria-hidden="true" className="mr-2 inline h-4 w-4" />}
                 {social.label}
               </a>
-            ))}
+            );})}
         </div>
       </div>
     </AnimatedSection>

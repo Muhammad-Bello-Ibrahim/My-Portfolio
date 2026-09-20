@@ -1,6 +1,7 @@
 import { profile } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import Image from "next/image";
+import { ArrowDown, BriefcaseBusiness, GitFork, MapPin } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -20,6 +21,7 @@ export function HeroSection() {
               href="#projects"
               className="interactive rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white dark:bg-white dark:text-slate-900"
             >
+              <ArrowDown aria-hidden="true" className="mr-2 inline h-4 w-4" />
               View Projects
             </a>
             <a
@@ -28,28 +30,20 @@ export function HeroSection() {
               rel="noreferrer"
               className="interactive rounded-full border border-slate-300 bg-white/80 px-6 py-3 text-sm font-semibold text-slate-800 backdrop-blur dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100"
             >
+              <GitFork aria-hidden="true" className="mr-2 inline h-4 w-4" />
               GitHub Profile
             </a>
           </div>
         </div>
 
-        <div className="glass-card overflow-hidden rounded-[2rem] p-3 sm:p-4">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-slate-950">
-            <Image src="/muhammad-bello-ibrahim.webp" alt="Muhammad Bello Ibrahim" fill priority sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover object-top" />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent p-6 pt-24 text-white">
-              <p className="text-xs uppercase tracking-[0.25em] text-sky-300">{profile.handle}</p>
-              <h2 className="mt-2 text-2xl font-bold">{profile.name}</h2>
-              <p className="mt-1 text-sm text-slate-300">{profile.location}</p>
-            </div>
-          </div>
-          <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
-            <div className="rounded-xl border border-slate-500/20 bg-white/40 p-3 dark:bg-slate-900/40">
-              <p className="text-slate-500 dark:text-slate-400">Experience</p>
-              <p className="font-semibold text-slate-900 dark:text-white">5+ Years</p>
-            </div>
-            <div className="rounded-xl border border-slate-500/20 bg-white/40 p-3 dark:bg-slate-900/40">
-              <p className="text-slate-500 dark:text-slate-400">Specialization</p>
-              <p className="font-semibold text-slate-900 dark:text-white">Frontend + Product</p>
+        <div className="flex flex-col items-center lg:items-end">
+          <Image src="/muhammad-bello-ibrahim.webp" alt="Muhammad Bello Ibrahim" width={1066} height={1280} priority sizes="(max-width: 1024px) 90vw, 40vw" className="h-auto w-full max-w-[430px] object-contain" />
+          <div className="mt-5 w-full max-w-[430px]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-500 dark:text-sky-300">{profile.handle}</p>
+            <h2 className="mt-1 text-xl font-bold text-slate-900 dark:text-white">{profile.name}</h2>
+            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <span className="inline-flex items-center gap-1.5"><MapPin aria-hidden="true" className="h-4 w-4 text-sky-500" />{profile.location}</span>
+              <span className="inline-flex items-center gap-1.5"><BriefcaseBusiness aria-hidden="true" className="h-4 w-4 text-sky-500" />5+ years building for the web</span>
             </div>
           </div>
         </div>
