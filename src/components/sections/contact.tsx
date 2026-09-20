@@ -9,16 +9,14 @@ export function ContactSection() {
 
       <div className="glass-card rounded-3xl p-6 sm:p-8">
         <p className="text-slate-600 dark:text-slate-300">
-          Available for strategic product collaborations, engineering leadership, and AIoT-driven platform development.
+          Open to frontend opportunities, product collaborations, technology training, and practical software projects with meaningful impact.
         </p>
 
         <div className="mt-5 flex flex-wrap gap-3">
-          <a href={`mailto:${profile.email}`} className="interactive rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white dark:bg-white dark:text-slate-900">
-            {profile.email}
+          <a href="https://github.com/Muhammad-Bello-Ibrahim" target="_blank" rel="noreferrer" className="interactive rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white dark:bg-white dark:text-slate-900">
+            View GitHub
           </a>
-          {profile.socialLinks
-            .filter((social) => social.label !== "Email")
-            .map((social) => (
+          {profile.socialLinks.filter((social) => social.label !== "GitHub").map((social) => (
               <a
                 key={social.label}
                 href={social.href}

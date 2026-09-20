@@ -19,7 +19,9 @@ export default function Home() {
     name: "Muhammad Bello Ibrahim",
     alternateName: "Mufteem Dev",
     jobTitle: "CEO, Orao Technologies",
-    knowsAbout: ["Frontend Development", "Next.js", "AI", "IoT", "Fintech", "EdTech", "HealthTech"],
+    alumniOf: "Gombe State University",
+    homeLocation: "Gombe, Nigeria",
+    knowsAbout: ["Frontend Development", "React", "Next.js", "Product Design", "Fintech", "Campus Technology", "Digital Health"],
   };
 
   return (

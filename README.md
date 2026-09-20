@@ -1,6 +1,6 @@
 # Mufteem Dev Portfolio
 
-A modern Next.js portfolio for **Muhammad Bello Ibrahim (Mufteem Dev)** focused on AIoT, fintech, EdTech, HealthTech, and product engineering leadership.
+A modern Next.js portfolio for **Muhammad Bello Ibrahim (Mufteem Dev)** focused on frontend development, product work, campus technology, fintech, and digital health.
 
 ## Tech Stack
 - Next.js 16 (App Router)
@@ -10,14 +10,14 @@ A modern Next.js portfolio for **Muhammad Bello Ibrahim (Mufteem Dev)** focused 
 - next-themes
 
 ## Features
-- Premium hero with brand statement: **Think Bold, Build Smart.**
+- Portrait-led hero with brand statement: **Think Bold, Build Smart.**
 - About, skills, projects, experience timeline, education, vision/mission, contact
 - Project filtering by domain
 - GitHub repository integration
 - Dark/light mode toggle
 - Micro-interactions and scroll-reveal animations
 - SEO metadata + JSON-LD schema
-- Downloadable CV button (`/public/cv/muhammad-bello-ibrahim-cv.pdf`)
+- Honest product status labels and verified profile links
 
 ## Project Structure
 ```text
@@ -73,5 +73,4 @@ npm run build
 
 ## Content Updates
 - Update all profile/project text in: `src/data/portfolio.ts`
-- Replace CV file at: `public/cv/muhammad-bello-ibrahim-cv.pdf`
 - Replace project thumbnails in: `public/projects/`

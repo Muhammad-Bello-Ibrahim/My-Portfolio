@@ -10,14 +10,14 @@ export function VisionSection() {
         <article className="glass-card rounded-3xl p-6">
           <h3 className="text-xl font-semibold text-slate-900 dark:text-white">Vision</h3>
           <p className="mt-3 text-slate-600 dark:text-slate-300">
-            To build an African innovation ecosystem where AI, IoT, and software platforms unlock measurable impact in finance, education, and healthcare.
+            To grow an African technology company that builds useful, dependable digital products for organisations and communities.
           </p>
         </article>
 
         <article className="glass-card rounded-3xl p-6">
           <h3 className="text-xl font-semibold text-slate-900 dark:text-white">Mission</h3>
           <p className="mt-3 text-slate-600 dark:text-slate-300">
-            Orao Technologies creates practical, secure, and scalable digital systems that empower organizations and communities to make smarter decisions.
+            Orao Technologies designs practical software, delivers technology training, and develops products that help people and organisations work more effectively.
           </p>
         </article>
       </div>

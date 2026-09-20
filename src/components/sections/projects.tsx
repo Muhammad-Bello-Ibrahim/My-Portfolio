@@ -54,6 +54,7 @@ export function ProjectsSection() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-500 dark:text-sky-300">{project.category}</p>
               <h3 className="mt-2 text-xl font-semibold text-slate-900 dark:text-white">{project.name}</h3>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{project.summary}</p>
+              <p className="mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-600 dark:text-emerald-300">{project.status}</p>
 
               <ul className="mt-3 flex flex-wrap gap-2">
                 {project.stack.map((item) => (
@@ -63,14 +64,10 @@ export function ProjectsSection() {
                 ))}
               </ul>
 
-              <div className="mt-4 flex gap-3 text-sm font-semibold">
-                <a href={project.links.live ?? "#"} className="text-sky-500 hover:text-sky-600 dark:text-sky-300 dark:hover:text-sky-200">
-                  Live
-                </a>
-                <a href={project.links.github ?? "#"} className="text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">
-                  Source
-                </a>
-              </div>
+              {(project.links.live || project.links.github) && <div className="mt-4 flex gap-3 text-sm font-semibold">
+                {project.links.live && <a href={project.links.live} className="text-sky-500 hover:text-sky-600 dark:text-sky-300 dark:hover:text-sky-200">Live</a>}
+                {project.links.github && <a href={project.links.github} className="text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">Source</a>}
+              </div>}
             </div>
           </motion.article>
         ))}

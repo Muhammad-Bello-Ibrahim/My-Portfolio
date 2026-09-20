@@ -11,7 +11,7 @@ async function getGithubRepos() {
   // Pull latest repositories with ISR caching for performance.
   // If GitHub is temporarily unreachable during build, fail gracefully.
   try {
-    const response = await fetch("https://api.github.com/users/qouda/repos?sort=updated&per_page=4", {
+    const response = await fetch("https://api.github.com/users/Muhammad-Bello-Ibrahim/repos?sort=updated&per_page=4", {
       next: { revalidate: 3600 },
     });
 
@@ -34,7 +34,7 @@ export async function GithubShowcaseSection() {
         <span className="inline-flex rounded-full border border-slate-500/25 bg-slate-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-500 dark:text-sky-300">
           GitHub
         </span>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Latest Open Source Activity</h2>
+        <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Latest Public Repositories</h2>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
